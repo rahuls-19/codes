@@ -1,20 +1,23 @@
 #include<stdio.h>
-int pow(int x,int y){
+float pow(float x,int y){
 	if(y==0)
 		return 1;
-	int temp=pow(x,y/2);
+	float temp=pow(x,y/2);
 	
 		if(y%2==0)
 			return temp*temp;
-		else
-			return x*temp*temp;
-
+		else{
+			if(y > 0)
+				return x*temp*temp;
+			else
+				return ((temp*temp)/x);
 }
-			
+		}	
 int main(){
-	int x,y;
-	scanf("%d%d",&x,&y);
-	int res = pow(x,y);
-	printf("%d",res);
+	int y;
+	float x;
+	scanf("%f%d",&x,&y);
+	float res = pow(x,y);
+	printf("%f",res);
 	return 0;
 }
