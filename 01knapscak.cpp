@@ -29,20 +29,19 @@ int knapscak(int W,int wt[],int val[],int n){
 }
 int main(){
 	int n,val[1000],wt[1000],W,t;
-	scanf("%d",&t);
-	while(t--){
-		scanf("%d",&n);
 		scanf("%d",&W);
+		scanf("%d",&n);
 		for(int i=0;i<n;i++){
-			scanf("%d",&val[i]);
+			scanf("%d%d",&wt[i],&val[i]);
 		}
+		/*
 		for(int i=0;i<n;i++){
 			scanf("%d",&wt[i]);
-		}
+		}*/
 	
-		printf("%d",knapscak(W,wt,val,n));
+		printf("%d\n",knapscak(W,wt,val,n));
 	
-		}
+		
 	
 	return 0;
 }
