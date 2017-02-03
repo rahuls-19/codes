@@ -11,7 +11,7 @@ int knapscak(int W,int wt[],int val[],int n){
 					k[i][w]=0 ; 
 				}
 		
-				else if(wt[i-1] <= W){
+				else if(wt[i-1] <= w){
 					k[i][w] = max(val[i-1]+k[i-1][w-wt[i-1]],k[i-1][w]);
 					
 				}
@@ -28,17 +28,21 @@ int knapscak(int W,int wt[],int val[],int n){
 	
 }
 int main(){
-	int n,val[1000],wt[1000],W;
-	scanf("%d",&n);
-	for(int i=0;i<n;i++){
-		scanf("%d",&val[i]);
-	}
-	for(int i=0;i<n;i++){
-		scanf("%d",&wt[i]);
-	}
-	scanf("%d",&W);
-	printf("%d",knapscak(W,wt,val,n));
+	int n,val[1000],wt[1000],W,t;
+	scanf("%d",&t);
+	while(t--){
+		scanf("%d",&n);
+		scanf("%d",&W);
+		for(int i=0;i<n;i++){
+			scanf("%d",&val[i]);
+		}
+		for(int i=0;i<n;i++){
+			scanf("%d",&wt[i]);
+		}
 	
+		printf("%d",knapscak(W,wt,val,n));
+	
+		}
 	
 	return 0;
 }
