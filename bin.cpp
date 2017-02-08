@@ -2,22 +2,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 int binSearch(int a[],int k,int high,int low){
+ int mid;
+ while(high-low > 1){
  
- if(low <= high){
- 
- 	int mid =(low+high)/2;	
- 	if(a[mid] > k){
- 		binSearch(a,k,high,mid+1);
- 		//low = mid+1;
+ 	 mid =(low+high)/2;	
+ 	if(a[mid] <= k){
+ 		//binSearch(a,k,high,mid+1);
+ 		low = mid;
 	 }
-	 else if(a[mid] <  k){
-	 	binSearch(a,k,mid-1,low);
-	 	//high = mid-1;
-	 }
+	 //else if(a[mid] <  k){
 	 else
-	 	return mid;
+	 	//binSearch(a,k,mid-1,low);
+	 	high = mid;
+	 //}
+	 
+	 //	return mid;
 }
- return -1;
+if(a[low] == k)
+	return low;
+else
+ 	return -1;
 }
 int main(){
 	int n,a[1000],i,k,res;
