@@ -14,6 +14,7 @@ int main() {
             if(count[s1[i]] == 0){
                 printf("%c",s1[i]);
                 s1[j] = s1[i];
+                j++;
             }
         }
         s1[j] = '\0';
