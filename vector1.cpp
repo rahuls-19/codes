@@ -25,4 +25,19 @@ for(int i=0;i<vec1.size();i++){
     cout << vec1[i] << " ";
 }
 cout << endl ;
+vec1.erase(vec1.begin()+1);
+
+for(int i=0;i<vec1.size();i++){
+    cout << vec1[i] << " ";
+}
+cout << endl ;
+cout <<vec1.empty() << endl;
+vec1.clear();
+
+for(int i=0;i<vec1.size();i++){
+    cout << vec1[i] << " ";
+
+}
+cout <<vec1.empty() << endl;
+cout << endl ;
 }
